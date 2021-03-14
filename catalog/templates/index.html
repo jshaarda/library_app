@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Library Home</h1>
+
+<p>Welcome to <em>The Library</em>, a Python Django website developed from a <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">tutorial example</a> on the Mozilla Developer Network.</p>
+<p>This library contains most of my books, magazines, and other material gathered in my life.</p>
+
+
+<h2>The Pile After MoveIn</h2>
+<p>My cat Alisyn supervising the mess.</p>
+
+<div>
+{% load static %}
+<img src="{% static "images/library.2.jpg" %}" alt="Book Pile" style="width:555px;height:540px;"/>
+</div>  
+
+
+<h2>Dynamic content</h2>
+
+<ul>
+<li><strong>Books:</strong> {{ num_books }}</li>
+</ul>
+
+You have visited this page {{ num_visits }} times.
+
+{% endblock %}

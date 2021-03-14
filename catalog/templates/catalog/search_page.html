@@ -1,0 +1,44 @@
+{% extends "base_generic.html" %}
+
+{% block content%}
+<h1 style="text-align:center; margin-top:50px">Search:</h1>
+<div class="relative">
+<form action="{% url 'search_results' %}" method="get">
+<p>
+	<label>Title:</label>
+	<input name="title" type="text">
+</p>
+<p>
+	<label>Author:</label>
+    <input name="author" type="text">
+</p>
+<p>
+	<label>Bookcase:</label>
+	<input name="bookcase" type="text">
+</p>
+<p>
+	<label>Shelf:</label>     
+	<input name="shelf" type="text">
+</p>
+<p>
+	<label>Genre:</label>     
+	<input name="genre" type="text">
+</p>
+<p>
+	<label>Language:</label>  
+	<input name="language" type="text">
+</p>
+<p>
+	<label>Format:</label>    
+	<input name="format" type="text">
+</p>
+<p>
+	<label>Other:</label>
+	<input name="other" type="text">
+</p>
+</div>
+<div class="button">
+<button type = “submit”>Submit</button>
+</div>
+</form>
+{% endblock %}

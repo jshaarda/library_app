@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2 style="text-align:center; margin-top:20px">Search Results</h2>
+
+<h3 style="text-align:center; margin-top:10px"><strong>Number of items found: </strong> {{ paginator.count }}</h3>
+
+<div class="results">
+<ul>
+  {% for Book in object_list %}
+    <li>
+      <a href="{{ book.get_absolute_url }}">{{ Book.title }}</a> {{ Book.author }} {{ Book.other }}
+    </li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock%}

@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+<div>
+{% block content %}
+
+<h1>Title: {{ book.title }}</h1>
+
+<p><strong>Author:</strong> {{ book.author }}</a></p>
+<p><strong>Bookcase:</strong> {{ book.bookcase }}</p>
+<p><strong>Shelf:</strong> {{ book.shelf }}</p> 
+<p><strong>Genre:</strong> {{ book.genre}}</p>
+<p><strong>Language:</strong> {{ book.language }}</p>  
+<p><strong>Format:</strong> {{ book.format }}</p>
+<p><strong>Other:</strong> {{ book.other }}</p>
+
+</div>
+{% endblock %}
+
